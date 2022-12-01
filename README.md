@@ -1,3 +1,3 @@
-# generic
+# Generic
 
 Software Development Company 
