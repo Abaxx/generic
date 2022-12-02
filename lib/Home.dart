@@ -12,16 +12,11 @@ class HomePage extends StatelessWidget {
       if(constraints.biggest.width > 800){
         // Desktop View
         return Scaffold(
-            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),],))
+            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection()],))
         );
       }else{ //Mobile View
         return Scaffold(
-          /*appBar: AppBar(
-            title: Image.asset('assets/images/Logo.png',height: 50,width: 80,),
-            centerTitle: true,
-          ),
-            drawer: createDrawer(context),*/
-            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),],))
+            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection()],))
         );
       }
     });
@@ -140,3 +135,104 @@ mobileSectionText()
   }
 }
   
+
+class WhatWeDoSection extends StatelessWidget {
+  const WhatWeDoSection({Key? key}) : super(key: key);
+
+saasContainer(double hgt,double wdt){
+  return Container(
+      height: hgt,
+      width: wdt,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/img1.jpeg'),
+          fit: BoxFit.fill,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 3,
+            offset: Offset(0,7),
+            color: Colors.black26,
+          )
+        ]
+      ),
+    );
+}
+
+appContainer(double hgt,double wdt){
+  return Container(
+      height: hgt,
+      width: wdt,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/img2.jpeg'),
+          fit: BoxFit.fill,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 3,
+            offset: Offset(0,7),
+            color: Colors.black26,
+          )
+        ]
+      ),
+    );
+}
+
+aiContainer(double hgt,double wdt){
+  return Container(
+      height: hgt,
+      width: wdt,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/img3.jpeg'),
+          fit: BoxFit.fill,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 3,
+            offset: Offset(0,7),
+            color: Colors.black26,
+          )
+        ]
+      ),
+    );
+}
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 500,
+      width: MediaQuery.of(context).size.width,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/img.jpeg'),
+          fit: BoxFit.fill,
+        )
+      ),
+      margin: const EdgeInsets.symmetric(vertical: 5),
+      
+      child: LayoutBuilder(builder: (context,constraints){
+      if(constraints.biggest.width > 800)
+        {
+          return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          saasContainer(200,260),appContainer(200,260),aiContainer(200,260)
+        ]
+        );
+        }else{
+           return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          saasContainer(120,200),appContainer(120,200),aiContainer(120,200)
+        ]
+        );
+            }
+    }),
+    );
+  }
+}
