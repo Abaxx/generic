@@ -31,10 +31,72 @@ class HomePage extends StatelessWidget {
 class HeroSection extends StatelessWidget {
   const HeroSection({Key? key}) : super(key: key);
 
+deskTopSectionText()
+{
+  return SizedBox(
+    height: 150, width: 300,
+    child: Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                border: Border(bottom: BorderSide(width: 10, color: Color(0xff0BF2C9))),
+              ),
+              child: const Text('THINK ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
+          ),
+          Container(
+              decoration: const BoxDecoration(
+                border: Border(left: BorderSide(width: 10, color: Color(0xff0BF2C9)), bottom: BorderSide(width: 10, color: Color(0xff0BF2C9))),
+              ),
+              child: const Text(' INVENT',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
+          )
+          ],
+        ),
+       const Text('INNOVATE',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
+      ]
+      ),
+  );
+}
+
+mobileSectionText()
+{
+  return SizedBox(
+    height: 150, width: 300,
+    child: Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                border: Border(bottom: BorderSide(width: 5, color: Color(0xff0BF2C9))),
+              ),
+              child: const Text('THINK ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          ),
+          Container(
+              decoration: const BoxDecoration(
+                border: Border(left: BorderSide(width: 5, color: Color(0xff0BF2C9)),bottom: BorderSide(width: 5, color: Color(0xff0BF2C9))),
+              ),
+              child: const Text(' INVENT',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          )
+          ],
+        ),
+       const Text('INNOVATE',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+      ]
+      ),
+  );
+}
 
    @override
   Widget build(BuildContext context) {
-    return Container(
+    return LayoutBuilder(builder: (context,constraints){
+      if(constraints.biggest.width > 800)
+        {
+          return Stack(
+      children: [
+        Container(
       height: 700,
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
@@ -43,10 +105,38 @@ class HeroSection extends StatelessWidget {
           fit: BoxFit.fill
         )
       ),
-      child: Column(
-        children: const [ Navbar(),],
-        ),
+      alignment: Alignment.topCenter,
+      child: const Navbar(),
+    ),
+    Positioned(
+      left: 100,
+      top: 300,
+      child: deskTopSectionText())
+      ],
     );
+        }else{
+           return Stack(
+            alignment: Alignment.bottomCenter,
+      children: [
+        Container(
+      height: 600,
+      width: MediaQuery.of(context).size.width,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/ai.jpg'),
+          fit: BoxFit.fill
+        )
+      ),
+      alignment: Alignment.topCenter,
+      child: const Navbar(),
+    ),
+    Positioned(
+      bottom: 40,
+      child: mobileSectionText())
+      ],);
+
+    }
+  });
   }
-  
 }
+  

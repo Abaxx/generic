@@ -13,7 +13,7 @@ class Navbar extends StatelessWidget {
         {
           return const DesktopNavbar();
         }else{
-           return Container();// MobileNavbar();
+           return const MobileNavbar();
             }
     });
   }
@@ -44,6 +44,41 @@ class _DesktopNavbarState extends State<DesktopNavbar> {
           })),
             const SizedBox(width: 20),
             RichText(text: const TextSpan(text: 'Contact Us',style:  TextStyle(color: Colors.white,fontSize: 20),
+                /*recognizer: TapGestureRecognizer()..onTap = (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactUs()),);
+            }*/),),
+            
+          ],)],
+      ),
+    );
+  }
+}
+
+class MobileNavbar extends StatefulWidget {
+  const MobileNavbar({Key? key}) : super(key: key);
+
+  @override
+  State<MobileNavbar> createState() => _MobileNavbarState();
+}
+class _MobileNavbarState extends State<MobileNavbar> {
+
+  
+  @override
+  Widget build(BuildContext context) {
+    return Padding(padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 10),
+      child: Row (
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [GestureDetector(child: const Text('GENERI{C}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),
+          onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
+          },),
+          Row(
+            children: [
+              RichText(text: TextSpan(text: 'Home',style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),
+              recognizer: TapGestureRecognizer()..onTap = () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
+          })),
+            const SizedBox(width: 20),
+            RichText(text: const TextSpan(text: 'Contact Us',style:  TextStyle(color: Colors.white,fontSize: 15),
                 /*recognizer: TapGestureRecognizer()..onTap = (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactUs()),);
             }*/),),
