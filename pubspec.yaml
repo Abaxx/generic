@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # To add icons to web
+  font_awesome_flutter: ^10.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,6 +87,13 @@ flutter:
        - asset: assets/fonts/Poppins-Light.ttf
        - asset: assets/fonts/Poppins-Medium.ttf
        - asset: assets/fonts/Poppins-Regular.ttf
+       - asset: assets/fonts/Poppins-Italic.ttf
+    - family: BubblegumSans
+      fonts:
+       - asset: assets/fonts/BubblegumSans-Regular.ttf 
+    - family: ChakraPetch
+      fonts:
+       - asset: assets/fonts/ChakraPetch-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
