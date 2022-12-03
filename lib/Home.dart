@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'Contact.dart';
 import 'Navbar.dart';
 
 class HomePage extends StatelessWidget {
@@ -280,7 +281,7 @@ class ProductsSection extends StatelessWidget {
         Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
-          Text('LOOP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
+          Text('LOOP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans',),),
           Text('PAYTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('SPECTRA',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('FINX',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
@@ -289,7 +290,7 @@ class ProductsSection extends StatelessWidget {
         const SizedBox(height: 80,),
         RichText(text: TextSpan(text: 'For more details',style: const TextStyle(color: Colors.white,fontSize: 15,fontFamily: 'poppins',fontStyle: FontStyle.italic),
         recognizer: TapGestureRecognizer()..onTap = (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage(),));}),textAlign: TextAlign.center),
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage(),));}),textAlign: TextAlign.center),
         ]);
         }else{
            return Column(
@@ -318,7 +319,7 @@ class ProductsSection extends StatelessWidget {
         const SizedBox(height: 80,),
         RichText(text: TextSpan(text: 'For more details',style: const TextStyle(color: Colors.white,fontSize: 15,fontFamily: 'poppins',fontStyle: FontStyle.italic),
         recognizer: TapGestureRecognizer()..onTap = (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage(),));}),textAlign: TextAlign.center),
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage(),));}),textAlign: TextAlign.center),
         ]);
        }
     }),
@@ -370,7 +371,7 @@ validateEmail(String email){
         const SizedBox(height: 15,),
         RichText(text: TextSpan(text: 'Contact us',style: const TextStyle(color: Colors.white,fontSize: 18),
             recognizer: TapGestureRecognizer()..onTap = (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage(),));})),
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage(),));})),
         SizedBox(height: hgt,),
         textWidget,],
     );

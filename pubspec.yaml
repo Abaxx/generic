@@ -38,6 +38,8 @@ dependencies:
   # To add icons to web
   font_awesome_flutter: ^10.1.0
 
+  http: ^0.13.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -91,6 +93,8 @@ flutter:
     - family: BubblegumSans
       fonts:
        - asset: assets/fonts/BubblegumSans-Regular.ttf 
+         style: normal
+
     - family: ChakraPetch
       fonts:
        - asset: assets/fonts/ChakraPetch-Bold.ttf

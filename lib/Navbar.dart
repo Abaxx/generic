@@ -1,8 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import 'Contact.dart';
 import 'Home.dart';
 
+// NavBar for home page only
 class Navbar extends StatelessWidget {
   const Navbar({Key? key}) : super(key: key);
 
@@ -43,10 +45,10 @@ class _DesktopNavbarState extends State<DesktopNavbar> {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
           })),
             const SizedBox(width: 20),
-            RichText(text: const TextSpan(text: 'Contact Us',style:  TextStyle(color: Colors.white,fontSize: 20),
-                /*recognizer: TapGestureRecognizer()..onTap = (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactUs()),);
-            }*/),),
+            RichText(text: TextSpan(text: 'Contact Us',style:  TextStyle(color: Colors.white,fontSize: 20),
+                recognizer: TapGestureRecognizer()..onTap = (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage()),);
+            }),),
             
           ],)],
       ),
@@ -78,10 +80,10 @@ class _MobileNavbarState extends State<MobileNavbar> {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
           })),
             const SizedBox(width: 20),
-            RichText(text: const TextSpan(text: 'Contact Us',style:  TextStyle(color: Colors.white,fontSize: 15),
-                /*recognizer: TapGestureRecognizer()..onTap = (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactUs()),);
-            }*/),),
+            RichText(text: TextSpan(text: 'Contact Us',style: const TextStyle(color: Colors.white,fontSize: 15),
+                recognizer: TapGestureRecognizer()..onTap = (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage()),);
+            }),),
             
           ],)],
       ),
