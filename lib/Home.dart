@@ -12,11 +12,11 @@ class HomePage extends StatelessWidget {
       if(constraints.biggest.width > 800){
         // Desktop View
         return Scaffold(
-            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection()],))
+            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection(),ProductsSection()],))
         );
       }else{ //Mobile View
         return Scaffold(
-            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection()],))
+            body:  SingleChildScrollView(child: Column(children: const [HeroSection(),WhatWeDoSection(),ProductsSection()],))
         );
       }
     });
@@ -214,25 +214,109 @@ aiContainer(double hgt,double wdt){
         )
       ),
       margin: const EdgeInsets.symmetric(vertical: 5),
-      
+    
       child: LayoutBuilder(builder: (context,constraints){
       if(constraints.biggest.width > 800)
         {
-          return Row(
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('What We Do',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
+              const SizedBox(height: 30,),
+              Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           saasContainer(200,260),appContainer(200,260),aiContainer(200,260)
-        ]
-        );
+        ])]);
         }else{
            return Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          const Text('What We Do',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           saasContainer(120,200),appContainer(120,200),aiContainer(120,200)
-        ]
-        );
-            }
+        ]);
+       }
     }),
     );
   }
+}
+
+
+class ProductsSection extends StatelessWidget {
+
+  const ProductsSection({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 400,
+      width: MediaQuery.of(context).size.width,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/img4.jpg'),
+          fit: BoxFit.fill,
+        )
+      ),
+      padding: const EdgeInsets.only(top: 50),
+      child: LayoutBuilder(builder: (context,constraints){
+      if(constraints.biggest.width > 800)
+        {
+          return Column(
+            children: [
+              const Text('R&D PRODUCTS',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
+              const SizedBox(height: 30,),
+              Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Text('ZIP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('PACKET',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+        ]),
+        const SizedBox(height: 50,),
+        Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Text('LOOP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('PAYTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('SPECTRA',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('FINX',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          Text('MIRAGE',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+        ]),
+        const SizedBox(height: 80,),
+        const Text('For more details',style: TextStyle(color: Colors.white,fontSize: 15),),
+        ]);
+        }else{
+           return Column(
+            children: [
+              const Text('R&D PRODUCTS',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+              const SizedBox(height: 20,),
+              Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Text('ZIP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('PACKET',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+        ]),
+        const SizedBox(height: 30,),
+        Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Text('LOOP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('PAYTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('SPECTRA',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('FINX',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          Text('MIRAGE',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+        ]),
+        const SizedBox(height: 80,),
+        const Text('For more details',style: TextStyle(color: Colors.white,fontSize: 15),),
+        ]);
+       }
+    }),
+    );
+  }
+  
 }
