@@ -271,7 +271,7 @@ class ProductsSection extends StatelessWidget {
               Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
-          Text('ZIP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
+          Text('TEXTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
@@ -300,7 +300,7 @@ class ProductsSection extends StatelessWidget {
               Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
-          Text('ZIP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
+          Text('TEXTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
@@ -359,7 +359,7 @@ validateEmail(String email){
   
   Column leftContents(BuildContext context,CrossAxisAlignment alignment,bool mobileView,double hgt)
   {
-    Widget textWidget = const Text('GENERI{C}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30,fontFamily: "ChakraPetch"),);
+    Widget textWidget = const Text('MARVELLON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30,fontFamily: "ChakraPetch"),);
     if(mobileView == false){
       textWidget= const Text("");
     }
@@ -419,13 +419,13 @@ validateEmail(String email){
         const SizedBox(height: 10,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-            children: const [FaIcon(FontAwesomeIcons.phone,color: Colors.white,size: 15,),Text('  +2348079279899',style: TextStyle(color: Colors.white),),]),
+            children: const [FaIcon(FontAwesomeIcons.phone,color: Colors.white,size: 15,),Text('  +2347061544486',style: TextStyle(color: Colors.white),),]),
         const SizedBox(height: 10,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-            children: const [FaIcon(FontAwesomeIcons.envelope,color: Colors.white,size: 15,),Text('  hello@generic.com',style: TextStyle(color: Colors.white),),]),
+            children: const [FaIcon(FontAwesomeIcons.envelope,color: Colors.white,size: 15,),Text('  hello@marvellon.com',style: TextStyle(color: Colors.white),),]),
         const SizedBox(height: 50,),
-        const Text('\u00a9 2022 GENERIC',style: TextStyle(color: Colors.white,fontSize: 15),),],
+        const Text('\u00a9 2022 MARVELLON',style: TextStyle(color: Colors.white,fontSize: 15),),],
     );
   }
   @override

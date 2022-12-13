@@ -65,7 +65,7 @@ class _DesktopNavbarState extends State<DesktopNavbar> {
     return Padding(padding: const EdgeInsets.symmetric(horizontal: 120,vertical: 20),
       child: Row (
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [GestureDetector(child: const Text('GENERI{C}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30,fontFamily: "ChakraPetch"),),
+        children: [GestureDetector(child: const Text('MARVELLON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30,fontFamily: "ChakraPetch"),),
           onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
           },),
           Row(
@@ -100,7 +100,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
     return Padding(padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 10),
       child: Row (
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [GestureDetector(child: const Text('GENERI{C}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "ChakraPetch"),),
+        children: [GestureDetector(child: const Text('MARVELLON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "ChakraPetch"),),
           onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
           },),
           Row(
@@ -158,7 +158,7 @@ class ContactState extends State<Contact>{
           'from_email': email,
           'subject' : subject,
           'message': message,
-          'company': "Generic"
+          'company': "Marvellon"
         }
       }));
   return response.statusCode;
