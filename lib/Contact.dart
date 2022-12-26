@@ -207,7 +207,11 @@ class ContactState extends State<Contact>{
               child: TextField(
                 controller: messageController,
                 decoration: InputDecoration(fillColor: Colors.white,filled: true,
-                border: OutlineInputBorder(borderSide: const BorderSide(width: 2),borderRadius: BorderRadius.circular(10),),),maxLines: 15,),),
+                border: OutlineInputBorder(
+                  borderSide: const BorderSide(width: 2),
+                  borderRadius: BorderRadius.circular(10),),),
+                  maxLines: 15,),
+                  ),
             const SizedBox(height: 20,),
           ],),
         MaterialButton(onPressed: () async {

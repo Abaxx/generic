@@ -273,7 +273,7 @@ class ProductsSection extends StatelessWidget {
         children: const [
           Text('TEXTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
-          Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
+          Text('SPORTO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
           Text('PACKET',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: 'BubblegumSans'),),
         ]),
@@ -302,7 +302,7 @@ class ProductsSection extends StatelessWidget {
         children: const [
           Text('TEXTON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('TRAFFICO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
-          Text('LEAP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
+          Text('SPORTO',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('BEAM',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
           Text('PACKET',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'BubblegumSans'),),
         ]),
