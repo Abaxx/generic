@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:generic/Navbar.dart';
 import 'package:http/http.dart' as http;
 
 import 'Home.dart';
@@ -97,7 +96,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 10),
+    return Padding(padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
       child: Row (
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [GestureDetector(child: const Text('MARVELLON',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "ChakraPetch"),),
@@ -109,7 +108,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
               recognizer: TapGestureRecognizer()..onTap = () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()),);
           })),
-            const SizedBox(width: 20),
+            const SizedBox(width: 15),
             RichText(text: TextSpan(text: 'Contact Us',style: const TextStyle(color: Colors.white,fontSize: 15),
                 recognizer: TapGestureRecognizer()..onTap = (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactPage()),);

@@ -425,7 +425,7 @@ validateEmail(String email){
           mainAxisAlignment: MainAxisAlignment.center,
             children: const [FaIcon(FontAwesomeIcons.envelope,color: Colors.white,size: 15,),Text('  hello@marvellon.com',style: TextStyle(color: Colors.white),),]),
         const SizedBox(height: 50,),
-        const Text('\u00a9 2022 MARVELLON',style: TextStyle(color: Colors.white,fontSize: 15),),],
+        const Text('\u00a9 2023 MARVELLON',style: TextStyle(color: Colors.white,fontSize: 15),),],
     );
   }
   @override
